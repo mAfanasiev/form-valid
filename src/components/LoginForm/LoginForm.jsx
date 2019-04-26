@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormInput, FormButton, FormRedirect } from '../FormElement';
+import Loader from '../Loader';
 
 const LoginForm = () => (
   <div className="form form__container">
@@ -13,6 +14,8 @@ const LoginForm = () => (
 
       <FormRedirect label="Зарегистрироваться" url="/register" />
     </form>
+
+    <Loader />
   </div>
 );
 
