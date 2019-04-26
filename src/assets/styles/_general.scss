@@ -1,0 +1,82 @@
+.flex {
+	&-justify-content-space-between {
+			display: flex;
+			justify-content: space-between;
+	}
+}
+
+.form-select {
+	position: relative;
+	
+	&::after {
+			content: '';
+			position: absolute;
+			top: 12px;
+			right: 15px;
+			width: 6px;
+			height: 6px;
+			background-color: transparent;
+			border-right: 2px solid $pale-dark;
+			border-bottom: 2px solid $pale-dark;
+			transform: rotate(45deg);
+			cursor: pointer;
+			pointer-events: none;
+	}
+
+	&.invalid {
+			border-color: $color-invalid;
+			background-color: rgba($color-invalid, 0.15);
+	}
+
+	.selected--flag--option {
+			height: 100%;
+			display: flex;
+			align-items: center;
+
+			&::before {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+			}
+	}
+
+	.country-flag {
+			display: flex;
+			align-items: center;
+	}
+
+	&.flag-select {
+			img {
+					position: relative;
+					top: 1px;
+					width: 20px;
+					height: auto;
+					border-radius: 2px;
+			}
+	}
+
+	.arrow-down {
+			display: none;
+	}
+
+	.country-label {
+			font-size: 13px !important;
+	}
+
+	.flag-options {
+			left: 0;
+			right: 0;
+	}
+}
+
+.text-blue {
+	color: $light-blue;
+	text-decoration: none;
+	transition: color 0.2s ease;
+
+	&:hover {
+			color: $blue;
+	}
+}
